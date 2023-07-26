@@ -1,0 +1,24 @@
+[package]
+name = "api"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+actix-web = "4.3.1"
+env_logger = "0.10.0"
+sqlx = { version = "0.7", features = [ "mysql", "chrono", "json", "runtime-tokio", "tls-native-tls"] }
+anyhow = "1.0.59"
+thiserror = "1.0.43"
+async-trait = "0.1.71"
+serde = { version = "1.0", features = ["derive"] }
+log = "0.4"
+chrono = "0.4.26"
+itertools = "0.11"
+derive-new = "0.5.9"
+dotenvy = "0.15.7"
+
+[dev-dependencies]
+mockall = "0.11.4"
+futures = "0.3.28"

@@ -1,0 +1,36 @@
+{
+  "db_name": "MySQL",
+  "query": "\n            SELECT\n                u.email,\n                CONCAT('[', GROUP_CONCAT(DATE_FORMAT(us.start, '%Y/%m/%d %H:%i') order by us.start), ']') as starts\n            FROM\n                t_user u INNER JOIN t_user_slot us ON u.id = us.user_id\n            GROUP BY\n                u.id\n            ORDER BY\n                u.id\n            ",
+  "describe": {
+    "columns": [
+      {
+        "ordinal": 0,
+        "name": "email",
+        "type_info": {
+          "type": "VarString",
+          "flags": "NOT_NULL | UNIQUE_KEY | NO_DEFAULT_VALUE",
+          "char_set": 224,
+          "max_size": 1024
+        }
+      },
+      {
+        "ordinal": 1,
+        "name": "starts",
+        "type_info": {
+          "type": "VarString",
+          "flags": "",
+          "char_set": 224,
+          "max_size": 4104
+        }
+      }
+    ],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": [
+      false,
+      true
+    ]
+  },
+  "hash": "86aea87423c51bf4393fb9e3e8b97c0cc5c1da5f0b0687609d88d1112c224e6f"
+}

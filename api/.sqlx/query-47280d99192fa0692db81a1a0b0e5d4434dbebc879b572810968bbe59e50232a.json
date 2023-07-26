@@ -1,0 +1,12 @@
+{
+  "db_name": "MySQL",
+  "query": "DELETE FROM t_user_slot",
+  "describe": {
+    "columns": [],
+    "parameters": {
+      "Right": 0
+    },
+    "nullable": []
+  },
+  "hash": "47280d99192fa0692db81a1a0b0e5d4434dbebc879b572810968bbe59e50232a"
+}
